@@ -1,0 +1,9 @@
+
+.link--active {
+
+    &:hover, 
+    &:active, 
+    &:focus {
+        color: $accent-cl;
+    }
+}

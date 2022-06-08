@@ -1,0 +1,207 @@
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 530px;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: #fff;
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 185ms;
+    animation: reverse;
+}
+
+.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal__btn {
+    position: absolute;
+    padding: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &-icon {
+        fill: #000000;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    &:hover,
+    &:focus,
+    &:hover .modal__btn-icon,
+    &:focus .modal__btn-icon {
+        transform: rotateZ(45deg);
+        fill: $accent-cl;
+    }
+}
+
+
+.modal-form {
+    margin: 40px;
+    padding: 0;
+
+    &__title {
+        display: block;
+        margin-bottom: 12px;
+    
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15em;
+        text-align: center;
+        color: #212121;
+    }
+}
+
+.modal-form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+    }
+
+    &.field--last {
+        margin-top: 20px;
+    }
+}
+
+.modal-form__caption {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.67em;
+    letter-spacing: 0.01em;
+    color: #757575;
+    position: relative;
+}
+
+.modal-form__input-wrap {
+    position: relative;
+}
+
+.modal-form__input {
+    padding: 10px 0;
+    width: 100%;
+
+}
+
+.modal-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal-form__input:hover ~ &,
+    .modal-form__input:active ~ &,
+    .modal-form__input:focus ~ & {
+        fill: $accent-cl;
+    }
+}
+
+.input--border {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        border-color: $accent-cl;
+    }
+    
+}
+
+textarea {
+    resize: none;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    height: 120px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment--textarea {
+    padding: 12px 16px;
+}
+
+.modal-form__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #757575; 
+}
+
+.form-conteinet__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    outline: 1px solid #212121;
+    border-radius: 2px;
+    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal-form__check:checked + & {
+        outline: 1px solid $accent-cl;
+        background-color: $accent-cl;
+    }
+}
+
+.modal-form__icon-confirmation {
+    fill: #fff;
+}
+
+.modal-form__link {
+    color: $accent-cl;
+}
+
+.modal-form__button {
+        margin: 0 auto;
+        margin-top: 30px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.87em;
+        padding: 10px 56px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus{
+            background-color: #188ce8;
+        }
+}
