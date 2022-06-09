@@ -41,10 +41,27 @@ picture {
 }
 
 .сontainer {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .сontainer {
+    width: 479px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .сontainer {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .сontainer {
+    width: 1200px;
+  }
 }
 
 .visually-hidden {
@@ -213,12 +230,18 @@ picture {
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+  }
 }
 
 .hero__btn {
@@ -449,17 +472,46 @@ textarea {
 }
 
 .specifics__list {
-  display: flex;
-  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .specifics__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .specifics__item {
-  flex-basis: calc((100% - 90px) / 4);
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
-.specifics__item:nth-child(4n) {
-  margin-right: 0;
+.specifics__item:last-child {
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .specifics__item {
+    flex-basis: calc((100% - 30px) / 2);
+    margin-right: 30px;
+  }
+  .specifics__item:nth-child(2n) {
+    margin-right: 0px;
+  }
+  .specifics__item:nth-child(n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .specifics__item {
+    flex-basis: calc((100% - 90px) / 4);
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+  .specifics__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .specifics__box {
@@ -478,12 +530,19 @@ textarea {
 }
 
 .specifics__title {
+  text-align: center;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: #212121;
+}
+
+@media screen and (min-width: 768px) {
+  .specifics__title {
+    text-align: left;
+  }
 }
 
 .specifics__text {
