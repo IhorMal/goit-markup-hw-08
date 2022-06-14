@@ -3,7 +3,7 @@
   padding-bottom: 200px;
   background-color: var(--dark-bg-cl);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/desktop/bg-img-hero.jpg);
+    url("../images/desktop/bg-img-hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -16,18 +16,18 @@
 
   @include mq(retina) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/desktop/bg-img-hero@2x.jpg);
+      url("../images/desktop/bg-img-hero@2x.jpg");
   }
 
   // For tablet background image
 
   @include mq(tablet) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/tablet/bg-img-hero.jpg);
+      url("../images/tablet/bg-img-hero.jpg");
 
     @include mq(retina) {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/tablet/bg-img-hero@2x.jpg);
+        url("../images/tablet/bg-img-hero@2x.jpg");
     }
   }
 
@@ -35,11 +35,11 @@
 
   @include mq(mobile-only) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/mobile/bg-img-hero.jpg);
+      url("../images/mobile/bg-img-hero.jpg");
 
     @include mq(retina) {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/mobile/bg-img-hero@2x.jpg);
+        url("../images/mobile/bg-img-hero@2x.jpg");
     }
   }
 }
