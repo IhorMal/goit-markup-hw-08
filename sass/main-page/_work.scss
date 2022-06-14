@@ -1,6 +1,10 @@
 .work {
     background-color: var(--main-bg-cl);
     padding-bottom: 94px;
+
+    @include mq(not-desktop) {
+        display: none;
+    }
 }
 
 .work-list {

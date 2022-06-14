@@ -1,37 +1,50 @@
 .team {
+  padding-bottom: 60px;
+  padding-top: 60px;
+  background-color: $secondary-bg-cl;
+
+  @include mq(desktop) {
     padding-bottom: 94px;
     padding-top: 94px;
-    background-color: $secondary-bg-cl;
+  }
 }
 
 .team-title {
+  margin-bottom: 30px;
+
+  @include mq(desktop) {
     margin-bottom: 50px;
+  }
 }
 
 .team-list {
+    grid-gap: 30px;
+  @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
+  }
 }
 
 .team-information {
-    padding-bottom: 30px;
-    padding-top: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .team-item {
-    flex-basis: calc((100% - 90px) / 4);
-    margin-right: 30px;
-    background-color: #fff;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.19;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+    margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.19;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
-    &:last-child {
-        margin-right: 0;
+  @include mq (mobile-only) {
+    &:not(:last-child) {
+       margin-bottom: 30px;
     }
+  }
 }
 
 .social-list {
@@ -39,7 +52,6 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-
 }
 
 .team-text {
@@ -59,7 +71,7 @@
 .social-icon {
     fill: #afb1b8;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     .social-link:hover &,
     .social-link:focus & {
             fill: #ffffff;

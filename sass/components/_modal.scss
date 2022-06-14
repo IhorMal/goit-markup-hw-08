@@ -21,12 +21,16 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 530px;
+    width: 450px;
     transform: translate(-50%, -50%) scale(1);
     background-color: #fff;
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 185ms;
     animation: reverse;
+
+    @include mq (desktop) {
+        width: 530px;
+    }
 }
 
 .is-hidden .modal {
@@ -158,9 +162,12 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     color: #757575; 
+    @include mq (desktop) {
+        font-size: 14px;
+    }
 }
 
 .form-conteinet__icon {

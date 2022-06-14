@@ -1,12 +1,16 @@
+// Mixin
+@import './base/mixin';
+
+@import './base/сontainer';
 @import './utils/variables';
 @import './base/reset-styles';
-@import './base/сontainer';
 @import './utils/visually-hidden';
 @import './components/logo';
 @import './components/link';
 @import './components/button';
 @import './components/title';
 @import './components/social';
+// Section
 @import './main-page/header';
 @import './main-page/hero';
 @import './components/modal';
