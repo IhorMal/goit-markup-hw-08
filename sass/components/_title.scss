@@ -1,8 +1,12 @@
 
 .title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.2;
     text-align: center;
     color: $secondary-txt-cl;
+    
+    @include mq (desktop) {
+        font-size: 36px;
+    }
 }
