@@ -1,8 +1,13 @@
 
 .specifics {
     background-color: $main-bg-cl;
-     padding-bottom: 94px;
-     padding-top: 94px;
+     padding-bottom: 60px;
+     padding-top: 60px;
+
+     @include mq (desktop) {
+        padding-bottom: 94px;
+            padding-top: 94px;
+     }
 }
 
 .specifics__list {

@@ -19,13 +19,13 @@
 .btn-list {
     display: flex;
     grid-gap: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
     
     @include mq (tablet) {
         justify-content: center;
         grid-gap: 0px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     @include mq (desktop) {
         margin-bottom: 50px;

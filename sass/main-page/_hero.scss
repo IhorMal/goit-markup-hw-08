@@ -1,33 +1,38 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: var(--dark-bg-cl);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-    url("/images/desktop/bg-img-hero.jpg");
+    url("../images/desktop/bg-img-hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1600px;
-  min-height: 600px;
+
   color: #fff;
   margin: 0 auto;
+
+  @include mq (desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   // For desktop background image
 
   @include mq(retina) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-      url("/images/desktop/bg-img-hero@2x.jpg");
+      url("../images/desktop/bg-img-hero@2x.jpg");
   }
 
   // For tablet background image
 
   @include mq(tablet) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-      url("/images/tablet/bg-img-hero.jpg");
+      url("../images/tablet/bg-img-hero.jpg");
 
     @include mq(retina) {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-        url("/images/tablet/bg-img-hero@2x.jpg");
+        url("../images/tablet/bg-img-hero@2x.jpg");
     }
   }
 
@@ -35,11 +40,11 @@
 
   @include mq(mobile-only) {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-      url("/images/mobile/bg-img-hero.jpg");
+      url("../images/mobile/bg-img-hero.jpg");
 
     @include mq(retina) {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)),
-        url("/images/mobile/bg-img-hero@2x.jpg");
+        url("../images/mobile/bg-img-hero@2x.jpg");
     }
   }
 }
