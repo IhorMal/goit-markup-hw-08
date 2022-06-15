@@ -12,7 +12,7 @@
 .team-title {
   margin-bottom: 30px;
 
-  @include mq(desktop) {
+  @include mq (desktop) {
     margin-bottom: 50px;
   }
 }

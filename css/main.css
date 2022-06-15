@@ -939,6 +939,12 @@ textarea {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .client-title {
+    margin-bottom: 50px;
+  }
+}
+
 .client-list {
   display: flex;
   flex-wrap: wrap;
