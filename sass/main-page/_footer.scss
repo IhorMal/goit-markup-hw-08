@@ -129,7 +129,7 @@
     height: 50px;
     padding-left: 16px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    
     &:hover,
     &:active,
     &:focus {
@@ -137,8 +137,12 @@
         border: 1px solid $accent-cl;
     }
 
-    @include mq (not-desktop) {
-        width: 450px;
+    @media screen and (max-width: 479px){
+        width: 300px;
+    }
+
+    @include mq (mobile) {
+       width: 450px;
     }
     @include mq (desktop) {
         width: 358px;

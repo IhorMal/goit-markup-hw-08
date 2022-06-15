@@ -1126,7 +1126,13 @@ textarea {
   border: 1px solid #2196f3;
 }
 
-@media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 479px) {
+  .footer-form-email {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 480px) {
   .footer-form-email {
     width: 450px;
   }
